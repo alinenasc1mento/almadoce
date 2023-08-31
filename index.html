@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alma Doce</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png">
+     
+</head>
+<body>
+   <header class="header">
+    <a href="index.html"> <img class="header-logo" src="img/logo.png" alt=""> </a>
+   
+     
+        
+				</header>
+
+			<div class="socialmedia"> 
+    <p><span style="color: #fdd588;"><b>Contato:</b></span></p>
+    <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5521965611319">
+        <img src="img/socialmedia/whatsapp0.png" alt="WhatsApp" onmouseover="this.src='img/socialmedia/whatsapp.png'" onmouseout="this.src='img/socialmedia/whatsapp0.png'"/>
+    </a>
+    <a href="https://www.instagram.com/almadoceonline/">
+        <img src="img/socialmedia/instagram0.png" alt="Instagram" onmouseover="this.src='img/socialmedia/instagram.png'" onmouseout="this.src='img/socialmedia/instagram0.png'"/>
+    </a>
+</div>
+
+	<div id="banner" class="dispositivo-grande">
+    <div class="banner"> <img src="img/banner0.png" /> </div>
+	
+	
+	</div>
+	
+	
+	<div id="banner" class="dispositivo-pequeno">
+	
+	<div class="banner"> <img src="img/almadocebanner.gif"> </div>
+	
+	</div>
+	
+	
+	   <style>
+  /* Estilos para dispositivos grandes */
+  @media (max-width: 600px) {
+    .dispositivo-grande {
+      display: none; /* Oculta o elemento com o ID "banner" em dispositivos menores */
+    }
+	 
+  }
+
+  /* Estilos para dispositivos pequenos */
+  @media (min-width: 601px) {
+    .dispositivo-pequeno {
+      display: none; /* Oculta o elemento com o ID "1banner" em dispositivos maiores */
+    }
+  }
+</style>
+	
+	
+	
+	
+    <div class="titulo"> <h1><b> Doces: </b></h1> </div>
+    <div class="cards">
+        <div class="produto">
+            <img src="img/brownie.png" alt="Brownie" class="produto-imagem">
+            <p class="produto-descricao" onclick="abrirPopup('Brownies')">Brownies</p>
+        </div>
+        <div class="produto">
+            <img    src="img/bolos.png" alt="bolos" class="produto-imagem">
+            <p class="produto-descricao" onclick="abrirPopup('Bolos')">Bolos</p>
+        </div>
+        <div class="produto">
+            <img src="img/cookie.png" alt="cookie" class="produto-imagem">
+            <p class="produto-descricao" onclick="abrirPopup('Cookies')">Cookies</p>
+        </div>
+        <div class="produto">
+            <img src="img/tortascookies.png" alt="tortas cookie" class="produto-imagem">
+            <p class="produto-descricao" onclick="abrirPopup('TortasCookies')">Tortas Cookies</p>
+        </div>
+    </div>
+    
+    <div id="popup"  class="popup"> 
+        <div   class="popup-conteudo">
+            <span class="fechar" onclick="fecharPopup()">&times;</span>
+            <div id="conteudo-popup"></div>
+        </div>
+    </div> <script>
+   function abrirPopup(produto) {
+    var popup = document.getElementById('popup');
+    var conteudoPopup = document.getElementById('conteudo-popup');
+
+    conteudoPopup.innerHTML = '';
+
+    var conteudo = document.createElement('div');
+
+    if (produto === 'Brownies') {
+        var imagem = document.createElement('img');
+        imagem.src = 'img/browniedescricao.png';
+        imagem.alt = 'Brownies';
+
+        var titulo = document.createElement('h2');
+        titulo.innerText = 'Brownies';
+
+        var descricao1 = document.createElement('p');
+        descricao1.innerText = '• Crocante (com amendoim)';
+
+        var descricao2 = document.createElement('p');
+        descricao2.innerText = '• Recheado com creme de avelã';
+
+        var descricao3 = document.createElement('p');
+        descricao3.innerText = '• Recheados: Brigadeiro, Brigadeiro branco, beijinho, doce de leite, leite ninho e paçoca';
+
+        var descricao4 = document.createElement('p');
+        descricao4.innerText = '• Tradicional com cobertura de chocolate ao leite';
+
+        var descricao5 = document.createElement('p');
+        descricao5.innerText = '• Tradicional com cobertura de chocolate branco';
+
+        var descricao6 = document.createElement('p');
+        descricao6.innerText = '• Mini tabuleiro';
+
+        var descricao7 = document.createElement('p');
+        descricao7.innerText = '• Individual: R$ 7 / Mini tabuleiro: R$ 50 / Mini tabuleiro c/ cobertura (recheio): R$ 60';
+
+        conteudo.appendChild(imagem);
+        conteudo.appendChild(titulo);
+        conteudo.appendChild(descricao1);
+        conteudo.appendChild(descricao2);
+        conteudo.appendChild(descricao3);
+        conteudo.appendChild(descricao4);
+        conteudo.appendChild(descricao5);
+        conteudo.appendChild(descricao6);
+        conteudo.appendChild(descricao7);
+
+        conteudoPopup.appendChild(conteudo);
+    } else if (produto === 'Cookies') {
+        var imagem = document.createElement('img');
+        imagem.src = 'img/cookiedescricao.png';
+        imagem.alt = 'Cookies';
+
+        var titulo = document.createElement('h2');
+        titulo.innerText = 'Cookies';
+
+        var descricao1 = document.createElement('p');
+        descricao1.innerText = '• ChocoChips';
+
+        var descricao2 = document.createElement('p');
+        descricao2.innerText = '• ChocoChips com recheio de creme de avelã';
+
+        var descricao3 = document.createElement('p');
+        descricao3.innerText = '• Chocolate';
+
+        var descricao4 = document.createElement('p');
+        descricao4.innerText = '• Chocolate com recheio de caramelo';
+
+        var descricao5 = document.createElement('p');
+        descricao5.innerText = '• Red Velvet';
+
+        var descricao6 = document.createElement('p');
+        descricao6.innerText = '• Individual: R$ 8';
+
+        var descricao7 = document.createElement('p');
+        descricao7.innerText = '• Torta Cookies (M): R$ 45 / Torta Cookies (G): R$ 60';
+
+        conteudo.appendChild(imagem);
+        conteudo.appendChild(titulo);
+        conteudo.appendChild(descricao1);
+        conteudo.appendChild(descricao2);
+        conteudo.appendChild(descricao3);
+        conteudo.appendChild(descricao4);
+        conteudo.appendChild(descricao5);
+        conteudo.appendChild(descricao6);
+        conteudo.appendChild(descricao7);
+
+        conteudoPopup.appendChild(conteudo);
+    }else if (produto === 'TortasCookies') {
+        var imagem = document.createElement('img');
+        imagem.src = 'img/tortacookiesdescricao.png';
+        imagem.alt = 'Tortas Cookies';
+
+        var titulo = document.createElement('h2');
+        titulo.innerText = 'Tortas Cookies';
+
+        var descricao1 = document.createElement('p');
+        descricao1.innerText = 'Massa: Tradicional ChocoChips, Tradicional ChocoChips e Nozes, Chocolate';
+
+        var descricao2 = document.createElement('p');
+        descricao2.innerText = 'Recheio: Brigadeiro, creme de avelã, caramelo salgado';
+
+        conteudo.appendChild(imagem);
+        conteudo.appendChild(titulo);
+        conteudo.appendChild(descricao1);
+        conteudo.appendChild(descricao2);
+
+        conteudoPopup.appendChild(conteudo);
+    } else if (produto === 'Bolos') {
+        var imagem = document.createElement('img');
+        imagem.src = 'img/bolosdescricao.png';
+        imagem.alt = 'Bolos';
+
+        var titulo = document.createElement('h2');
+        titulo.innerText = 'Bolos';
+
+        var descricao1 = document.createElement('p');
+        descricao1.innerText = 'TODOS SÃO COM TRÊS CAMADAS DE BOLO E DUAS DE RECHEIO, COM COBERTURA.';
+
+        var descricao2 = document.createElement('p');
+        descricao2.innerText = 'Tamanhos: Redondo';
+
+        var descricao3 = document.createElement('p');
+        descricao3.innerText = 'Aro 20cm - Até 25 pedaços - R$ 150.00';
+
+        var descricao4 = document.createElement('p');
+        descricao4.innerText = 'Aro 25cm - Até 35 pedaços - R$ 170.00';
+
+        var descricao5 = document.createElement('p');
+        descricao5.innerText = 'Bentô Cake: 10cm - R$ 40.00';
+
+        var descricao6 = document.createElement('p');
+        descricao6.innerText = 'Massas: Baunilha, Brownie, Chocolate, Red Velvet';
+
+        var descricao7 = document.createElement('p');
+        descricao7.innerText = 'Recheios: Brigadeiro, Brigadeiro Branco, Doce de leite, Brigadeiro de Ninho, Brigadeiro de Nutella, Brigadeiro de Paçoca, Cremoso de Coco, Creme de cream cheese, Creme belga, Ganache cremosa de chocolate, Crocante de amendoim ou castanhas.';
+
+        var descricao8 = document.createElement('p');
+        descricao8.innerText = 'Adicionais para os recheios: R$ 10.00';
+
+        var descricao9 = document.createElement('p');
+        descricao9.innerText = 'Morangos, Nozes, Compota de abacaxi, Geleia de frutas vermelhas, Amêndoas trituradas, Oreo.';
+
+        var descricao10 = document.createElement('p');
+        descricao10.innerText = 'Cobertura & Decoração: Ganache de chocolate, Naked / Naked no acetato, Buttercream suíço';
+
+        conteudo.appendChild(imagem);
+        conteudo.appendChild(titulo);
+        conteudo.appendChild(descricao1);
+        conteudo.appendChild(descricao2);
+        conteudo.appendChild(descricao3);
+        conteudo.appendChild(descricao4);
+        conteudo.appendChild(descricao5);
+        conteudo.appendChild(descricao6);
+        conteudo.appendChild(descricao7);
+        conteudo.appendChild(descricao8);
+        conteudo.appendChild(descricao9);
+        conteudo.appendChild(descricao10);
+
+        conteudoPopup.appendChild(conteudo);
+    }
+
+    popup.style.display = 'block';
+}
+
+function fecharPopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+</script>
+	
+ 
+	<div class="informacoes">
+    <h3><span style="color: #fdd588;">Informações:</span></h3>
+    <table>
+        <tr>
+            <th><span style="color: #4e1a08;">Item</span></th>
+            <th><span style="color: #4e1a08;">Preço</span></th>
+        </tr>
+        <tr>
+            <td>Topo de bolo:</td>
+            <td>R$ 15</td>
+        </tr>
+        <tr>
+            <td>Polaroid:</td>
+            <td>R$ 2.50 cada</td>
+        </tr>
+        <tr>
+            <td>Taxa de entrega:</td>
+            <td>consultar bairro.</td>
+        </tr>
+        <tr>
+            <td>Forma de pagamento:</td>
+            <td>Pix, Pic Pay, cartão de crédito (link online e acréscimo de R$ 3,00).</td>
+        </tr>
+    </table>
+ 
+</div>
+
+	    <p class="finalinfo"><span style="color:#a26f5d;">Para bolos em formatos e decorações diferentes,<br>
+	chama a gente pra conversar e conte a sua ideia! Sendo possível, a gente faz!</span></p>
+
+
+
+<h1 class="sobrenostitulo"> Sobre nós: </h1>
+
+<div class="sobrenos" id="sobrenos">
+	 
+
+ <img src="img/sobrenos.png" >
+	
+	
+	<p> me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz
+	me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz me chamo beatriz </p>
+
+</div>	
+	
+	
+	 
+	
+	
+	
+	<div class="formafooter"> <img src="img/background-footer1.png"> </div>
+	<div class="footerlogo"> <img src="img/logofooter.png"/> </div>
+    <footer class="footer">
+              <div class="textoinformativo">
+            <b> <span style="color: #fdd588;"><h1>Funcionamento:</h1></span> </b>
+            <b><span style="color: #ffd3e1;">Fornadas de doces:</b></span> 
+			Sexta ou Sábado - Dependendo do fluxo da semana.
+		
+            <b><span style="color: #ffd3e1;">Encomendas:</span></b>
+			Com no mínimo 48h antes da data de entrega.<br> Dependendo do doce necessário mais tempo.<br>
+             <span style="color: #ffd3e1;"><b>Período sazonal:</b></span>
+			 Dia dos Namorados, Páscoa e Natal
+        </div>  
+        
+    </footer>
+</body>
+</html>
